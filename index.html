@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3072</title>
+    <link rel="stylesheet" href="styles.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=League+Gothic&family=Montserrat:wght@400;700&family=Raleway&family=Roboto+Mono&family=Rubik:ital@0;1&display=swap"
+        rel="stylesheet">
+    <script src="script.js" type="module"></script>
+</head>
+
+<body>
+    <div class="bgIMG"><img src="bg_img.jpg" alt=""></div>
+    
+    <div class="game">
+
+        <div class="navbar">
+            <div class="first">
+                <div>
+                    <span class="title">3072&nbsp;&nbsp;</span>
+                </div>
+                <div class="two">
+                    <button class="btn info" id="information" onclick="info();">i</button><span>&nbsp;&nbsp;</span><button id="clickMe" class="btn">↻</button>
+                </div>
+            </div>
+            <div class="second">
+                <div class="description">Join the numbers and get to the <br><b>3072</b> tile!</div>
+            </div>
+
+        </div>
+
+
+        <div class="mainContent">
+            <div class="description2" id="howToPlay">
+                How to play: <br><br>
+                Use your arrow-keys to slide the tiles. <br><br>
+                Two tiles with the same value in line can be merged. The goal is to merge the tiles and get the 3072
+                tile. <br><br>
+                Every time you move a tile you will see a random joke!
+                <br><br>
+                __________________ <br><br>
+                Made by Adosh Singh 08/2022
+            </div>
+            <div class="popUp" id="lose">
+                You Lose! <br><br>
+                Press ↻ to play again.
+            </div>
+            <div class="popUp" id="win">
+                You Win! <br><br>
+                Press ↻ to play again. <br><br>
+                Or continue.
+            </div>
+            <div id="game-board"></div>
+        </div>
+        <div id="joke" class="jokes"></div>
+    </div>
+</body>
+
+</html>

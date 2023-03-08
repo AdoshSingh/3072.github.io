@@ -1,0 +1,228 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    font-family: 'Rubik', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* @media screen and (max-width: 1400px) {
+    body {
+        background-color: lightgreen;
+    } */
+
+    /* .title{
+        font-size: 12px;
+        background-color: red;
+    } */
+
+    /* .first {
+        display: flex;
+        justify-content: space-between;
+        background-color: red;
+        align-items: center;
+        font-size: 2px;
+        padding: 0px 20rem;
+        margin-top: 23px;
+    }
+    
+    .second {
+        padding: 0px 20rem;
+    }
+    
+} */
+
+body{
+
+    display: flex;
+    flex-direction: column;
+
+}
+
+.bgIMG {
+    position: absolute;
+    z-index: -2;
+    height: 100vh;
+    width: 100vw;
+    opacity: 0.2;
+    /* object-fit: contain; */
+    overflow: hidden;
+}
+
+.navbar {
+    display: flex;
+    flex-direction: column;
+}
+
+.first {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* padding: 0px 35rem; */
+    margin-top: 23px;
+}
+
+.second {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 19px;
+    /* padding: 0px 35rem; */
+}
+
+.title {
+    font-size: 9.5vmin;
+    color: #776e65;
+}
+
+.btn {
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #88b1ef;
+    border-radius: 50%;
+    border: 0;
+    font-size: 20px;
+    top: 50px;
+    color: white;
+    cursor: pointer;
+    outline: none;
+}
+
+.btn:hover {
+    background-color: #7ba9ed;
+}
+
+.two {
+    display: flex;
+    flex-direction: row;
+}
+
+
+.mainContent {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 65vh;
+    font-size: 7.5vmin;
+
+}
+
+.description {
+    color: #776e65;
+    text-align: center;
+}
+
+.description2 {
+    position: absolute;
+    height: 45vmin;
+    width: 45vmin;
+    transform: scale(0);
+    background-color: #fff;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    z-index: 200;
+    font-size: 15px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    visibility: hidden;
+    transition: 0.3s all;
+}
+
+.description2.show {
+    position: absolute;
+    visibility: visible;
+    font-size: 15px;
+    opacity: 1;
+    transform: scale(1);
+    transition: 0.3s all;
+}
+
+.popUp {
+    position: absolute;
+    height: 45vmin;
+    width: 45vmin;
+    transform: scale(0);
+    background-color: #fff;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5);
+    opacity: 1;
+    z-index: 250;
+    font-size: 5vmin;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    visibility: hidden;
+    transition: 0.3s all;
+    outline: none;
+}
+
+.popUp.show {
+    position: absolute;
+    visibility: visible;
+    font-size: 3vmin;
+    opacity: 0.9;
+    transform: scale(1);
+    transition: 0.3s all;
+}
+
+#game-board {
+    display: grid;
+    grid-template-columns: repeat(var(--grid-size), var(--cell-size));
+    grid-template-rows: repeat(var(--grid-size), var(--cell-size));
+    background-color: #9f9285;
+    gap: var(--cell-gap);
+    border-radius: 1vmin;
+    padding: var(--cell-gap);
+    position: relative;
+}
+
+.cell {
+    background-color: #cdc1b4;
+    border-radius: 1vmin;
+}
+
+.tile {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: var(--cell-size);
+    height: var(--cell-size);
+    border-radius: 1vmin;
+    top: calc(var(--y) * (var(--cell-size) + var(--cell-gap)) + var(--cell-gap));
+    left: calc(var(--x) * (var(--cell-size) + var(--cell-gap)) + var(--cell-gap));
+    font-size: 5vmin;
+    font-weight: bold;
+    background-color: hsl(30, 50%, var(--background-lightness));
+    color: hsl(30, 8%, var(--text-lightness));
+    animation: show 200ms ease-in-out;
+    transition: 100ms ease-in-out;
+}
+
+@keyframes show {
+    0% {
+        opacity: .5;
+        transform: scale(0);
+    }
+}
+
+.jokes {
+    text-align: center;
+    font-size: 23px;
+    color: #776e65;
+    visibility: hidden;
+}
+
+.jokes.notHidden {
+    text-align: center;
+    font-size: 23px;
+    color: #776e65;
+    visibility: visible;
+}
